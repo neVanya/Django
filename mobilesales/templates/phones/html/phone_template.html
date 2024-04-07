@@ -1,0 +1,17 @@
+{% extends 'phones/html/base.html' %}
+
+{% block content %}
+  <div class="phone-details">
+    <h1>{{ phone.brand }} {{ phone.model }}</h1>
+    <img src="{{ phone.photo.url }}" alt="{{ phone.model }} Photo" class="phone-photo">
+    <p>Стоимость: {{ phone.price }} рублей</p>
+    <p>В наличие: {{ phone.stock_quantity }}</p>
+  </div>
+
+  {% if phone.description %}
+    <div class="phone-description">
+      <h2>Описание телефона</h2>
+      <div class="description-content">{{ phone.description }}</div>
+    </div>
+  {% endif %}
+{% endblock content %}

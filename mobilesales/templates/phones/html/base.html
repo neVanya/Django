@@ -1,0 +1,34 @@
+{% load static %}
+<link type="text/css" href="{% static 'phones/css/style.css' %}" rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body class="base">
+{% block mainmenu %}
+    <div class="header">
+        <a class="img-logo" href="{% url 'home' %}"><img src="{% static 'phones/images/logo.png' %}"></a>
+        <ul id="mainmenu" class="mainmenu">
+            {% for m in menu %}
+                <li><a class="text-a-base" href="{% url m.url_name %}">{{ m.title }}</a></li>
+            {% endfor %}
+            <p class="text-auth">
+                {% if user.is_authenticated %}
+                    {{ user.username }}
+                    <a class="text-auth-href" href="{% url 'logout' %}">Выход</a>
+                    <a class="text-auth-href" href="{% url 'profile' %}">Профиль</a>
+                {% else %}
+                    <a class="text-auth-href" href="{% url 'login' %}">Вход</a>
+                    Гость
+                {% endif %}
+            </p>
+        </ul>
+    </div>
+    <div class="line"></div>
+{% endblock mainmenu %}
+{% block content %}
+{% endblock content %}
+</body>
+</html>

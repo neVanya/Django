@@ -1,0 +1,13 @@
+{% extends 'phones/html/base.html' %}
+{% block content %}
+<div class="div-form">
+  <form method="post" action="{% url 'registration' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Register">
+  </form>
+
+  <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</div>
+
+{% endblock content %}

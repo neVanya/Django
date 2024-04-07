@@ -1,0 +1,40 @@
+{% extends 'phones/html/base.html' %}
+{% block content %}
+  <ul class="text-showcase">
+    {% for phone in phones %}
+        <li class="text-showcase-item">
+            <a href="{% url 'phones' phone_slug=phone.slug %}">
+                <div class="phone-info">
+                    <div class="brand">{{ phone.brand }}</div>
+                    <div class="model">{{ phone.model }}</div>
+                    <div class="price">Цена: {{ phone.price }}</div>
+                    <div class="stock-quantity">Количество: {{ phone.stock_quantity }}</div>
+                    {% if phone.photo %}
+                        <div class="photo"><img src="{{ phone.photo.url }}" alt="{{ phone.model }} Photo"></div>
+                    {% else %}
+                        <div class="no-photo">No Photo</div>
+                    {% endif %}
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+    <span class="step-links">
+      {% if phones.has_previous %}
+        <a href="?page=1">&laquo; первая</a>
+        <a href="?page={{ phones.previous_page_number }}">предыдущая</a>
+      {% endif %}
+
+      <span class="current">
+        Страница {{ phones.number }} из {{ phones.paginator.num_pages }}.
+      </span>
+
+      {% if phones.has_next %}
+        <a href="?page={{ phones.next_page_number }}">следующая</a>
+        <a href="?page={{ phones.paginator.num_pages }}">последняя &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
+{% endblock content %}

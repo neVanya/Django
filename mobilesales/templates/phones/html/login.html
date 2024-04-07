@@ -1,0 +1,14 @@
+{% extends 'phones/html/base.html' %}
+{% block content %}
+<div class="div-form">
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.username.label_tag }} {{ form.username }}
+    {{ form.password.label_tag }} {{ form.password }}
+    <input type="submit" value="Login">
+  </form>
+
+  <p>Don't have an account? <a href="{% url 'registration' %}">Register here</a></p>
+</div>
+
+{% endblock content %}

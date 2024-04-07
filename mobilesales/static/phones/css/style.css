@@ -1,0 +1,266 @@
+.mainmenu {
+    display: flex;
+    margin: 0 0 0 50px;
+    column-gap: 20px;
+    font-size: 20px;
+}
+.header {
+    background: #0a0a0a;
+    height: 100px;
+}
+.text-a-base {
+    color: #f9a602;
+    text-decoration: none;
+    font-family: Arial Black;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.img-logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.base{
+    background-color: #f9a602;
+    margin: 5px;
+}
+
+.line {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #0a0a0a;
+}
+
+.text-showcase {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-showcase-item {
+    color: #FFA500;
+    background-color: #0a0a0a; /* Black background color */
+    width: 200px; /* Adjust the width of each item as needed */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 20px 5px 0 0;
+}
+
+.text-showcase-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.phone-info {
+    text-align: center;
+}
+
+.no-photo {
+    font-style: italic;
+    color: #777; /* Gray text color for no photo */
+}
+
+/* Add additional styling for brand, model, price, etc. if needed */
+.phone-info .brand {
+    font-weight: bold;
+}
+
+.phone-info .photo img {
+    max-width: 100%; /* Ensure images don't overflow the container */
+}
+
+.phone-details {
+    max-width: 600px;
+    margin: 20px 0 auto;
+    padding: 20px;
+    background-color: #0a0a0a; /* Черный фон */
+    color: #f9a602; /* Оранжевый текст */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.phone-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.phone-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.phone-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.phone-description {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: #f9a602;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 105px;
+    left: 650px;
+    right: 5px;
+}
+
+.phone-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description-content {
+    font-size: 16px;
+}
+
+.div-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000; /* черный фон */
+    color: #f9a602; /* оранжевый текст */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.div-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-form label {
+    margin-bottom: 10px;
+}
+
+.div-form input[type="text"],
+.div-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.div-form input[type="submit"] {
+    background-color: #f9a602; /* оранжевая кнопка */
+    color: #000; /* черный текст */
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.div-form input[type="submit"]:hover {
+    background-color: #ffcc00; /* измененный цвет при наведении */
+}
+
+.div-form p {
+    margin-top: 20px; /* добавляем немного отступа сверху */
+    text-align: center; /* выравниваем текст по центру */
+}
+
+.div-form a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f9a602; /* оранжевый фон */
+    color: #000; /* черный текст */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.div-form a:hover {
+    background-color: #ffcc00; /* измененный цвет при наведении */
+}
+
+.text-auth {
+    color: #f9a602;
+    font-family: Arial Black;
+    position: absolute;
+    top: 10px;
+    right: 70px;
+}
+
+/* Добавьте эти стили в ваш CSS-файл */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.step-links a {
+  color: #f9a602; /* Оранжевый цвет для цифр */
+  background-color: #0a0a0a; /* Черный цвет для фона */
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.current {
+  color: #0a0a0a; /* Белый цвет для текущей страницы */
+  background-color: #f9a602; /* Оранжевый цвет для фона текущей страницы */
+  border: 1px solid #0a0a0a;
+  padding: 8px 16px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.text-auth-href {
+    text-decoration: none;
+    color: #f9a602;
+}
+
+.center-block {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f9a602; /* Цвет текста в форме */
+}
+
+button {
+    padding: 10px;
+    background-color: #f9a602;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.h2-add-phone {
+    color: #f9a602;
+}
